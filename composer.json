@@ -1,0 +1,10 @@
+{
+    "scripts": {
+        "start": "python3 backend_server.py",
+        "start-backend": "python3 send_startbackend.py",
+        "start-database": "python3 send_startdatabase.py",
+        "start-frontend": "python3 send_startfrontend.py",
+        "start-rabbitmq": "python3 start_rabbitmq.py",
+        "start-all": "python3 send_startall.py"
+    }
+}

@@ -1,0 +1,17 @@
+Waiting for requests
+Traceback (most recent call last):
+  File "/home/backend/backend-py/backend_server.py", line 39, in <module>
+    ch.start_consuming()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/backend/backend-py/venv/lib/python3.14/site-packages/pika/adapters/blocking_connection.py", line 1979, in start_consuming
+    self._process_data_events(time_limit=None)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/backend/backend-py/venv/lib/python3.14/site-packages/pika/adapters/blocking_connection.py", line 2147, in _process_data_events
+    self.connection.process_data_events(time_limit=time_limit)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/backend/backend-py/venv/lib/python3.14/site-packages/pika/adapters/blocking_connection.py", line 897, in process_data_events
+    self._flush_output(common_terminator)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/backend/backend-py/venv/lib/python3.14/site-packages/pika/adapters/blocking_connection.py", line 551, in _flush_output
+    raise self._closed_result.value.error
+pika.exceptions.ConnectionClosedByBroker: (320, "CONNECTION_FORCED - broker forced connection closure with reason 'shutdown'")
